@@ -1,0 +1,16 @@
+{
+  "name": "hospital-api",
+  "version": "1.0.0",
+  "description": "This is a hospital API",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sagar Das",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  }
+}
