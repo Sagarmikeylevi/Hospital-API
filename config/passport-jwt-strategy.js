@@ -7,9 +7,10 @@ let opts = {
     jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
     secretOrKey: 'hospitalApi'
  }
-passport.use(new JWTStrategy(opts , function(jwtPayLoad , done){
 
-    Doctor.findById(jwtPayLoad._id , function(err , doctor){
+ passport.use(new JWTStrategy(opts , function(jwtPayLoad, done){
+
+   Doctor.findById(jwtPayLoad._id , function(err , doctor){
         if (err) {
             console.log('Error in finding user from JWT');
             return done(err, false);
@@ -21,6 +22,7 @@ passport.use(new JWTStrategy(opts , function(jwtPayLoad , done){
             return done(null, false);
         }
     });
-}));
+
+ }));
 
 module.exports = passport;
