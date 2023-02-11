@@ -14,7 +14,7 @@ module.exports.createSession = async (req , res) =>{
         return res.status(200).json( {
             message: 'Sign in successful, here is your token, Please keep it safe!',
             data: {
-                token: jwt.sign(doctor.toJSON() , 'hospitalApi' , {expiresIn: '100000'})
+                token: jwt.sign(doctor.toJSON() , 'hospitalApi' , {expiresIn: '1000000'})
             }
         });
 
@@ -34,7 +34,6 @@ module.exports.register = async (req , res) =>{
             let doctor = await Doctor.create(req.body);
             return res.status(200).json({
                 message: "Registered successfully",
-                doctor: doctor
             });
         }else{
             return res.status(409).json({
