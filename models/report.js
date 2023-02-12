@@ -6,9 +6,10 @@ const reportSchema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Doctor'
     },
-    diagnosticInformation: {
+    diagnose: {
         type: String,
-        required: true
+        required: true,
+        enum: ['Refractive Errors','Cataracts', 'Glaucoma' , 'Diabetic Retinopathy' , 'Others']
     },
     description: {
         type: String,
