@@ -30,3 +30,6 @@ The Hospital API is a web-based application that allows doctors to manage patien
 ## Deployement
 Project already deployed on Render. Visit: https://hospitalapis.onrender.com/
 
+## Video Link
+Visit: https://www.youtube.com/watch?v=icMZMffrXtM
+
